@@ -9,7 +9,210 @@
     <script src="../server.js"></script>
 </head>
 <body>
+        <div class="container content">
+                <h1>Survey</h1>
+                <p>Answer these quick questions and you will receive a match! The choices range from 1 to 5 with 1 meaning strongly agree and 5 is strongly disagree.</p>
+                <form>
+                    <div class="form-group">
+                        <input id="name" type="text" class="form-control" placeholder="Name (Required)">
+                    </div>
+                    <div class="form-group">
+                        <input id="photo" type="text" class="form-control" placeholder="Link to Profile Photo (Required)">
+                    </div>
+                    <div class="form-group">
+                        <label for="question1">I workout everyday.</label>
+                        <select class="form-control" id="question1">
+                            <option value="empty"></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                            <label for="question2">I will get stronger no matter what!.</label>
+                            <select class="form-control" id="question2">
+                                <option value="empty"></option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                                <label for="question3">I am not the sharpset tool in the shed.</label>
+                                <select class="form-control" id="question3">
+                                    <option value="empty"></option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                    <label for="question4">I think really highly of myself.</label>
+                                    <select class="form-control" id="question4">
+                                        <option value="empty"></option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                        <label for="question5">I push myself beyond all limits.</label>
+                                        <select class="form-control" id="question5">
+                                            <option value="empty"></option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                            <label for="question6">I love Senzu beans as a good pick me up.</label>
+                                            <select class="form-control" id="question6">
+                                                <option value="empty"></option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                            </select>
+                                        </div>
+                                             <div class="form-group">
+                                    <label for="question7">I have an insaitiable appetite.</label>
+                                    <select class="form-control" id="question7">
+                                        <option value="empty"></option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                        <label for="question8">I will fight to protect what's right.</label>
+                                        <select class="form-control" id="question7">
+                                            <option value="empty"></option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                            <label for="question9">Weakness in others annoys me.</label>
+                                            <select class="form-control" id="question7">
+                                                <option value="empty"></option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                                <label for="question10">Strength matters most to me.</label>
+                                                <select class="form-control" id="question7">
+                                                    <option value="empty"></option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                </select>
+                                            </div>
     
+                                            <div class="text-center">
+                                                    <button id="submitBtn" type="submit" class="btn btn-success btn-lg">Submit</button>
+                                                </div>
+
+                                                <div id="bff" tabindex="-1" class= "modal fade" role="dialog">
+                                                    <div id ='bff'></id>
+                                                        <div class="modal-dialog" role="document">
+                                                          <div class="modal-content">
+                                                            <div class="modal-header">
+                                                              <h5 class="modal-title">Modal title</h5>
+                                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                              </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <h2 id ="bestfriend"></h2>
+                                                                <img id ="bestfriendphoto" src = "#">
+                                                              <p>Thank you for taking the survey!.</p>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                              <button type="button" class="btn btn-primary">Save changes</button>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+        
+                                                      <script
+	  src="https://code.jquery.com/jquery-3.2.1.min.js"
+	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	  crossorigin="anonymous"></script>
     
 </body>
+<script type = 'text/javascript'>
+
+var valid = true; 
+
+$('#submitBtn').on('click', function (event) {
+
+    event.preventDefault();
+//validation
+    
+
+    if ($('#name').val() === $("#photo").val() === "") {
+
+        valid = false; 
+
+    } else if ($("#question1").val() === "empty" || $("#question2").val() === "empty" || $("#question3").val() === "empty" || $("#question4").val() === "empty" || $("#question5").val() === "empty" || $("#question6").val() === "empty" || $("#question7").val() === "empty" || $("#question8").val() === "empty" || $("#question9").val() === "empty" || $("#question10").val() === "empty") {
+			valid = false;
+		}
+
+    })
+    if(valid === true) {
+			var newUser = {
+				name: $("#name").val().trim(),
+				photo: $("#photo").val().trim(),
+				scores: [
+					$("#question1").val(),
+					$("#question2").val(),
+					$("#question3").val(),
+					$("#question4").val(),
+					$("#question5").val(),
+					$("#question6").val(),
+					$("#question7").val(),
+					$("#question8").val(),
+					$("#question9").val(),
+					$("#question10").val()
+				]
+			};
+			var currentURL = window.location.origin;
+			$.post(currentURL + "/api/friends", newUser, function(data) {
+				$("#bestfriend").text(data.name);
+                $("#bestfriendphoto").attr("src", data.photo);
+				$("#bff").modal("toggle");
+			});
+		} else {
+			
+			alert("Survey is incomplete!");
+		}
+	
+</script>
+
+</script>
 </html>
