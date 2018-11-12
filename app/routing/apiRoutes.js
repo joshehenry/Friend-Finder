@@ -10,9 +10,10 @@ module.exports = function (app) {
     });
 
     app.post("/api/friends", function (req, res) {
+        console.log(req.body.scores);
+       
 
-        friends.push(req.body);
-        res.json(true);
+    
 
         var user = req.body;
 
@@ -21,10 +22,15 @@ module.exports = function (app) {
             user.scores[i] = parseInt(user.scores[i]);
         }
 
+
+
         for (var i = 0; i < friends.length; i++) {
 
             var totalDifference = 0;
 
+
+
+            
             for (var j = 0; j < friends[i].scores.length; j++) {
                 var difference = Math.abs(user.scores[j] - friends[i].scores[j]);
                 totalDifference += difference;
